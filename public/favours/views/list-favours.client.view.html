@@ -1,0 +1,26 @@
+<section data-ng-controller="FavoursController" data-ng-init="find()">
+    <h1>Logs</h1>
+    <ul>
+        <li data-ng-repeat="favour in favours">
+            <a data-ng-href="#!/favours/{{favour._id}}" data-ng-bind="favour.description"></a>
+            <br>
+            <small data-ng-bind="favour.created | date:'medium'"></small>
+            <small></small>
+                <p>From: </p>
+            <p data-ng-bind="favour.subject"></p>
+                <p>To: </p>
+            <p data-ng-bind="favour.target.fullName"></p>
+            <p data-ng-bind="favour.description"></p>
+        </li>
+    </ul>
+    <div data-ng-hide="!favours || favours.length">
+        <a>No favours yet, why don't you go ou and do a good deed? </a>
+        <br>
+
+
+    </div>
+    <div>
+        <a href="#!/">Home</a>
+    </div>
+
+</section>

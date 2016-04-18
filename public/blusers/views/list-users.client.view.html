@@ -1,0 +1,13 @@
+<section data-ng-controller="UsersController" data-ng-init="find()">
+    <h1>Users</h1>
+    <ul>
+        <li data-ng-repeat="user in users">
+            <a data-ng-href="#!/users/{{user._id}}" data-ng-bind="user.title"></a>
+            <br>
+            <small data-ng-bind="user.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="user.fullName"></small>
+            <p data-ng-bind="article.content"></p>
+        </li>
+    </ul>
+</section>
